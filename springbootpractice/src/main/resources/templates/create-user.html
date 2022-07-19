@@ -13,7 +13,8 @@
     <input type="text" name="lastName" id="lastName">
     <label for="age">Age</label>
     <input type="text" name="age" id="age">
-    <input type="submit" value="Add user">
+    <span th:if="${user.firstName!=null}"><input type="submit" value="Update user"></span>
+    <span th:if="${user.firstName==null}"><input type="submit" value="Add user"></span>
 </form>
 </body>
 </html>
