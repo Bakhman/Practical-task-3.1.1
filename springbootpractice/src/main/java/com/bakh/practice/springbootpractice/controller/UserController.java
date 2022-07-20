@@ -23,6 +23,11 @@ public class UserController {
     public UserController(UserService userService) {
         this.userService = userService;
     }
+    
+    @GetMapping("/")
+    public String greeting() {
+        return "homePage";
+    }
 
     @GetMapping("/users")
     public String getAllUsers(Model model) {
